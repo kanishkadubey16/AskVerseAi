@@ -8,3 +8,4 @@ torch
 huggingface-hub
 numpy
 pydantic
+PyPDF2
