@@ -5,7 +5,7 @@ import uvicorn
 import os
 import shutil
 import uuid
-from .utils import extract_text_from_pdf, clean_text, chunk_text
+from utils import extract_text_from_pdf, clean_text, chunk_text
 from .faiss_engine import FAISSEngine
 from .rag import RAGPipeline
 
