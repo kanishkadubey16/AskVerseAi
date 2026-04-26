@@ -2,3 +2,13 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+# AI / ML files
+*.bin
+*.pkl
+
+# Chat / session files
+*.json
+
+# Uploaded files
+uploaded_documents/
