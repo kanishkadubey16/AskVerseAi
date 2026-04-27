@@ -1,14 +1,7 @@
+.streamlit/secrets.toml
+.env
 venv/
 __pycache__/
-*.pyc
-.env
-
-# AI / ML files
+uploaded_documents/
 *.bin
 *.pkl
-
-# Chat / session files
-*.json
-
-# Uploaded files
-uploaded_documents/

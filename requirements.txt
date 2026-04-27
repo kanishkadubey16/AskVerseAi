@@ -1,0 +1,7 @@
+streamlit
+faiss-cpu
+numpy
+pandas
+requests
+huggingface_hub
+PyPDF2

@@ -1,15 +1,16 @@
 import os
 import re
-from dotenv import load_dotenv
+import streamlit as st
 from typing import List, Optional
 from huggingface_hub import InferenceClient
 
-# Load from specific path
-env_path = os.path.join(os.path.dirname(__file__), ".env")
-load_dotenv(dotenv_path=env_path)
+# Strictly use Streamlit secrets
+try:
+    HF_API_KEY = st.secrets["HF_TOKEN"]
+except Exception:
+    HF_API_KEY = ""
 
-HF_API_KEY = os.getenv("HF_TOKEN") or os.getenv("HF_API_KEY")
-os.environ["HF_TOKEN"] = HF_API_KEY or ""  # Ensure SDK picks it up
+os.environ["HF_TOKEN"] = HF_API_KEY  # Ensure SDK picks it up
 
 CHAT_MODELS = [
     "meta-llama/Llama-3.1-8B-Instruct",  # PRIMARY - confirmed working
